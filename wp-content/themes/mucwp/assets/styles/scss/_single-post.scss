@@ -1,0 +1,35 @@
+.post {
+  .article-header {
+    .post-categories {
+      padding-bottom: 15px;
+      a {
+        background-color: $secondary-color;
+        padding: 3px 8px;
+        font-size: 0.7rem;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $primary-color;
+        }
+      }
+    }
+    .date {
+      margin-bottom: 0;
+    }
+    .byline {
+      .avatar {
+        padding-right: 20px;
+      }
+      a {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+  }
+  .entry-content {
+    img {
+      padding-bottom: 15px;
+    }
+  }
+}

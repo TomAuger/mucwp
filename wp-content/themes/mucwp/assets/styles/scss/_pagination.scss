@@ -1,0 +1,69 @@
+.page-navigation {
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  .pagination {
+    li {
+      a {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primary-color;
+        &:hover {
+          background-color: transparent;
+          color: $secondary-color;
+        }
+      }
+      // arrows
+      .prev {
+
+      }
+      .next {
+
+      }
+    }
+    .current {
+      background: transparent;
+      color: gray;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+.post-navigation {
+  margin: 50px 0;
+  a {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 5px;
+  }
+  .alignleft {
+    float: none;
+    max-width: 100%;
+    text-align: center;
+  }
+  .alignright {
+    margin-top: 30px;
+    float: none;
+    max-width: 100%;
+    text-align: center;
+  }
+  @include breakpoint(medium) {
+    .alignleft {
+      float: left;
+      max-width: 200px;
+      text-align: left;
+    }
+    .alignright {
+      float: right;
+      margin-top: 0;
+      max-width: 200px;
+      text-align: right;
+    }
+  }
+}

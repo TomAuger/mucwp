@@ -1,0 +1,62 @@
+.footer {
+  background-color: $secondary-color;
+  .inner-footer {
+    margin: 0 auto;
+    padding: 30px 0 20px 0;
+    #menu-footer {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+      align-items: center;
+      display: block;
+      ul {
+        text-align: center;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin: 0 auto;
+        .menu-item {
+          display:inline-block;
+          a {
+            color: white;
+          }
+          &.active > a {
+            background: transparent;
+            color: $primary-color;
+          }
+          &:hover > a {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+    .footer-column {
+      text-align: center;
+      @include breakpoint('medium') {
+        text-align: left;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  // Footer Stacked Option
+  .footer-stacked {
+    text-align: center;
+    #footer-column-1 {
+      text-align: center;
+    }
+  }
+
+  .copyright, p {
+    text-align: center;
+    color: white;
+  }
+
+  .elementor {
+    padding-bottom: 30px;
+  }
+
+}
+

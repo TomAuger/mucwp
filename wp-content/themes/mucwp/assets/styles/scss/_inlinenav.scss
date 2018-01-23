@@ -1,0 +1,35 @@
+// Image navigation
+.inline-navigation {
+  margin-top: 40px;
+  .alignment-grid {
+    img {
+      margin: 20px 0;
+    }
+  }
+
+  .inline-item {
+   padding: 25px 0;
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  hr {
+    width: 100%;
+    margin: 0;
+  }
+  .bg-overlay {
+    color: white;
+    background-color: $primary-color;
+    background-size: cover;
+    background-position: center center;
+    min-height: 250px;
+    text-align: center;
+    padding: 20px;
+    a {
+      color: white;
+    }
+  }
+}

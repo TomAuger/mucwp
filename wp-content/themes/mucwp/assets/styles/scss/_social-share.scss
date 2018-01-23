@@ -1,0 +1,29 @@
+.post-share {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  h4 {
+    text-align: center;
+  }
+  .social-buttons {
+    .icon {
+      .circle {
+        fill: $primary-color;
+        -webkit-transition: all .1s linear;
+        -moz-transition: all .1s linear;
+        -ms-transition: all .1s linear;
+        -o-transition: all .1s linear;
+        transition: all .1s linear;
+        &:hover {
+          fill: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+.social-icons-widget { list-style-type:none; margin:0 0 15px; width:100%; }
+.social-icons-widget li { display:inline-block; margin:0 6px 10px 0; }
+.social-icons-widget.show-labels li { display:block; }
+.social-icons-widget li a { margin:0; }
+.social-icons-widget.show-labels li img { margin-right:10px; vertical-align:middle; }

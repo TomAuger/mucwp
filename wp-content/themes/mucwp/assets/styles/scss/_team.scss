@@ -1,0 +1,52 @@
+// Single page styles
+.team-single {
+  .team-image {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .additional-information-header {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .additional-info {
+
+  }
+  .name {
+
+  }
+  .job-title {
+    font-size: 1.4rem;
+  }
+  .bio {
+
+  }
+}
+
+// Listing page styles
+.team-listing {
+  .columns {
+    margin-bottom: 20px;
+  }
+  .team-image {
+    margin: 15px 0;
+    width: 100%;
+  }
+  .name {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  .job-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  .additional-info {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  .bio {
+
+  }
+  .bio-link {
+    margin-bottom: 20px;
+  }
+}

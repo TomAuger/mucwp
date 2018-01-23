@@ -1,0 +1,424 @@
+// This is the wrapper for all of the header elements
+.ln-nav {
+  position: relative;
+  height: auto;
+  display: block;
+  width: 100%;
+  overflow: visible;
+  top: 0;
+  background-color: white;
+  -webkit-transition: all .25s linear;
+  -moz-transition: all .25s linear;
+  -o-transition: all .25s linear;
+  transition: all .25s linear;
+  .desktop-menu {
+    overflow: visible;
+    .is-dropdown-submenu {
+      min-width: min-content;
+      z-index: 999;
+    }
+  }
+  .site-logo-desktop {
+    height: 100px;
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+  }
+  @include breakpoint('medium') {
+    background-color: white;
+  }
+}
+
+// This class gets applied if you have persistent header enabled
+// You can set a background colour transition and a logo size change if you wish
+.ln-nav.nav-transition {
+  background-color: white;
+  @include breakpoint('medium') {
+    background-color: white
+  }
+  .site-logo-desktop {
+    height: 70px;
+  }
+}
+
+
+.header {
+  background-color: white;
+  position: relative;
+  z-index: 200;
+
+  .site-logo-desktop {
+    height: 80px;
+    display: none;
+  }
+
+  .blog-info {
+    margin-bottom: 0;
+  }
+
+  // Navigation link colours
+  .menu {
+    float: none;
+    .menu-item {
+      display: block;
+    }
+    a {
+      color: $primary-color;
+      &:hover {
+        transition: all;
+        color: $secondary-color;
+      }
+    }
+    .active {
+      a {
+        background-color: transparent;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  // Mobile defaults
+  .title-bar-title {
+    .site-logo {
+      max-height: 70px;
+      float: left;
+    }
+  }
+
+  // Burger menu
+  .menu-icon {
+    &:after {
+      background: $primary-color;
+      box-shadow: 0 7px 0 $primary-color, 0 14px 0 $primary-color;
+    }
+  }
+
+
+  // Centered Stacked
+  .centered-stacked, .title-bar {
+    padding: 10px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    .site-logo-desktop {
+      @include breakpoint('medium') {
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+    }
+    .menu {
+      @include breakpoint('medium') {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+        float: none;
+        align-items: center;
+        display: block;
+        margin-bottom: 1.5rem;
+        .menu-item {
+          display: inline-block;
+        }
+      }
+    }
+    // mobile
+    .title-bar-title {
+      .site-logo {
+        height: 60px;
+      }
+    }
+    .menu-icon {
+      float: right;
+    }
+  }
+
+  // Centered Split
+  .centered-split, .title-bar {
+    padding: 10px;
+    margin: 0 auto;
+    background-color: transparent;
+    @include breakpoint('medium') {
+      padding: 20px 0;
+    }
+    .site-logo-desktop {
+      @include breakpoint('medium') {
+        display: inline-block;
+      }
+    }
+    .left-split {
+      text-align: center;
+      #menu-left {
+        float: none;
+      }
+    }
+    .right-split {
+      text-align: center;
+    }
+    @include breakpoint('medium') {
+      .left-split {
+        text-align: right;
+        #menu-left {
+          float: right;
+        }
+      }
+      .right-split {
+        text-align: left;
+      }
+    }
+
+    // mobile
+    .title-bar-title {
+      .site-logo {
+        height: 60px;
+        float: left;
+      }
+    }
+    .menu-icon {
+      float: right;
+    }
+  }
+
+  // Left-Right
+  .left-right, .title-bar {
+    padding: 10px;
+    margin: 0 auto;
+    background-color: transparent;
+    text-align: center;
+    @include breakpoint('medium') {
+      padding: 20px 0;
+    }
+    .site-logo-desktop {
+      @include breakpoint('medium') {
+        float: left;
+        display: inline-block;
+      }
+    }
+    .menu {
+      @include breakpoint('medium') {
+        float: right;
+        .menu-item {
+          display: inline-block;
+        }
+      }
+    }
+    // mobile
+    .title-bar-title {
+      .site-logo {
+        height: 60px;
+      }
+    }
+    .menu-icon {
+      float: right;
+    }
+  }
+
+  // Right-Left
+  .right-left, .title-bar {
+    padding: 10px;
+    margin: 0 auto;
+    background-color: transparent;
+    text-align: center;
+    @include breakpoint('medium') {
+      padding: 20px 0;
+    }
+    .site-logo-desktop {
+      @include breakpoint('medium') {
+        display: inline-block;
+        float: right;
+      }
+    }
+    .menu {
+      @include breakpoint('medium') {
+        float: left;
+        .menu-item {
+          display: inline-block;
+        }
+      }
+    }
+    // mobile
+    .title-bar-title {
+      .site-logo {
+        height: 60px;
+      }
+    }
+    .menu-icon {
+      float: right;
+    }
+  }
+}
+
+// Features
+#nav-featurebar {
+  padding: 0 15px 15px 15px;
+  .nav-search {
+    width: 100%;
+    @include breakpoint('medium') {
+      width: auto;
+    }
+    .navigation-search {
+      .search-field {
+        margin: 0;
+        display: inline-block;
+        height: 1.9rem;
+        width: 90%;
+        @include breakpoint('medium') {
+          width: 150px;
+        }
+      }
+      .search-submit {
+        color: $primary-color;
+        background-color: transparent;
+        margin: 0;
+        padding: 3px;
+        font: normal normal normal 18px/1 FontAwesome;
+        vertical-align: top;
+        height: 1.9rem;
+        transition: all 0.5s linear;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+  .site-login {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    a, p {
+      margin-bottom: 0;
+    }
+    a {
+      font-weight: bold;
+      text-decoration: underline;
+      color: $primary-color;
+      transition: all 0.5s linear;
+      &:hover {
+        text-decoration: none;
+        color: $secondary-color;
+      }
+    }
+    @include breakpoint('medium') {
+      text-align: center;
+      width: auto;
+    }
+  }
+}
+
+.features-absolute {
+  position: relative;
+  top: 10px;
+  right: 0;
+  @include breakpoint('medium') {
+    position: absolute;
+  }
+}
+
+// Colour overrides for transparent headers
+.reversed {
+
+  // Mobile
+  background-color: transparent;
+  .menu {
+    a {
+      color: white;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+    .active {
+      a {
+        color: $secondary-color;
+      }
+    }
+  }
+  .menu-icon {
+    &:after {
+      background: white;
+      box-shadow: 0 7px 0 white, 0 14px 0 white;
+    }
+  }
+
+  .title-bar {
+    @include breakpoint('medium') {
+      background-color: transparent;
+      padding: 20px 0;
+      position: relative;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  .centered-stacked, .centered-split, .left-right, .right-left{
+    @include breakpoint('medium') {
+      background-color: $primary-color;
+      padding: 20px 0;
+      position: relative;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  // Desktop
+  @include breakpoint('medium') {
+    background-color: transparent;
+    .menu {
+      a {
+        color: white;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+      .active {
+        a {
+          color: $secondary-color;
+        }
+      }
+    }
+    .centered-stacked, .centered-split, .left-right, .right-left, .title-bar {
+       background-color: transparent;
+    }
+  }
+  .ln-nav {
+    background-color: transparent;
+  }
+
+  .ln-nav.nav-transition {
+    background-color: $primary-color;
+    @include breakpoint('medium') {
+      background-color: $primary-color
+    }
+  }
+
+  // Features
+  #nav-featurebar {
+    .navigation-search {
+      .search-submit {
+        color: white;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+    .site-login {
+      a, p {
+        color: white;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+
+
+
