@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/lumosnox"]
+	path = wp-content/themes/lumosnox
+	url = git@bitbucket.org:artscience/as_lumosnox_library.git
